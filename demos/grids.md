@@ -1,33 +1,33 @@
 ---
 template: default.html
-title: Better, Simpler Grid Systems
-excerpt: Flexbox gives us most of the features we want from a grid system out of the box. And sizing and alignment are just one or two properties away.
+title: Grids melhores e mais simples
+excerpt: Flexbox nos dá a maior parte dos recursos que queremos de um sistema de grid de forma simples. E tamanho e alinhamento estão apenas uma ou duas propriedades de distância.
 ---
 
-Most grid systems today use one of two layout methods: `float` or `inline-block`. But neither of these methods were really intended to be used for layout and as a result have pretty significant problems and limitations.
+A maioria dos sistemas de grid hoje utilizam dois métodos de layout: `float` ou `inline-block`. Mas nenhum desses métodos foram realmente planejados para serem usados para layout e, como resultado, trazem alguns problemas e limitações.
 
-Using floats requires clearing them which has a whole host of layout issues, most notoriously that clearing an element sometimes forces it below an unrelated part of the page (take this [Bootstrap issue](https://github.com/twbs/bootstrap/issues/295#issuecomment-2282969) for example). In addition, clearing floats usually requires using both before and after pseudo-elements, preventing you from using them for something else.
+Usar floats requer limpá-los periodicamente (NT: como `clear: both`) o que traz toda uma série de problemas de layout, mais notadamente que limpar um elemento muitas vezes o move para uma parte não relacionada da página (veja esse [bug do Bootstrap](https://github.com/twbs/bootstrap/issues/295#issuecomment-2282969) como exemplo). Também, limpar floats geralmente requer utilizar os pseudo-elementos `before` e `after`, impossibilitando assim que você os utilize para outras coisas.
 
-Inline block layouts must address the problem of [white-space between inline-block items](http://css-tricks.com/fighting-the-space-between-inline-block-elements/), and all of the [solutions](http://davidwalsh.name/remove-whitespace-inline-block) to that problem are [hacky](https://github.com/suitcss/components-grid/blob/master/lib/grid.css#L30) and [annoying](https://twitter.com/thierrykoblentz/status/305152267374428160).
+Layouts com `inline-block` precisam lidar com o problema de [espaço em branco entre itens com inline-block](http://css-tricks.com/fighting-the-space-between-inline-block-elements/), e todas as [soluções](http://davidwalsh.name/remove-whitespace-inline-block) para esse problema se utilizam de [hack](https://github.com/suitcss/components-grid/blob/master/lib/grid.css#L30) e são [irritantes](https://twitter.com/thierrykoblentz/status/305152267374428160).
 
-Flexbox not only eliminates these problems, it opens up an entirely new world of possibilities.
+O Flexbox não só elimina esses problemas como também abre um novo mundo de possibilidades.
 
-## Features of a Flexbox Grid System
+## Características de um Grid com Flexbox
 
-Grid systems usually come with a myriad of sizing options, but the vast majority of the time you just want two or three elements side-by-side. Given this, why should we be required to put sizing classes on every single cell?
+Sistemas de grid geralmente vêm com uma grande quantidade de opções de dimensionamento dos elementos, mas na maior parte das vezes você vai apenas usar dois ou três elementos lado a lado. Dado isso, por que deveríamos colocar classes de tamanhos em cada célula desse grid?
 
-Listed below are some of my criteria for an ideal grid system. Fortunately, with Flexbox we get most of these features for free.
+Listados abaixo estão alguns dos meus critérios para um sistema de grid ideal. Felizmente, com Flexbox nós temos todos esses recursos de graça.
 
-- By default, each grid cell is the same width and height as every other cell in the row. Basically they all size to fit by default.
-- For finer control, you can add sizing classes to individual cells. Without these classes, the cells simply divide up the available space as usual.
-- For responsive grids, you can add media query-specific classes to the cells.
-- Individual cells can be aligned vertically to the top, bottom, or middle.
-- When you want all of the cells in a grid to have the same sizing, media, or alignment values, you should be able to just add a single class to the container to avoid unnecessary repetition.
-- Grids can be nested as many levels deep as needed.
+- Por padrão, cada célula do grid tem a mesma largura e altura de qualquer outra célula na mesma linha. Basicamente, todas elas se encaixam automaticamente por padrão.
+- Para um controle mais refinado, você pode adicionar classes de tamanho em células individuais. Sem essas classes, elas apenas dividirão o espaço disponível entre si.
+- Para grids responsivos, você pode adicionar classes específicas de media query às células.
+- Células individuais podem ser alinhadas verticalmente ao topo, à base ou ao meio.
+- Quando você quiser que todas as células em um grid tenham o mesmo tamanho ou alinhamento, deveria ser possível adicionar apenas uma classe ao conteiner para evitar repetição desnecessária.
+- Grids podem ser aninhados por quantos níveis forem necessários.
 
-### Basic Grids
+### Grids Básicos
 
-The grid cells below do not specify any widths, they just naturally space themselves equally and expand to fit the entire row. They're also equal height by default.
+As células de grids abaixo não especificam nenhuma largura, elas naturalmente tomam o espaco disponível entre si e se expandem para caber na linha inteira. Elas também tem altura igual por padrão.
 
 <div class="Grid Grid--gutters u-textCenter">
   <div class="Grid-cell">
@@ -68,7 +68,7 @@ The grid cells below do not specify any widths, they just naturally space themse
 <div class="Grid Grid--gutters Grid--flexCells">
   <div class="Grid-cell">
     <div class="Demo">
-      Full-height, even when my content doesn't fill the space.
+      Altura total, mesmo quando o conteúdo não preenche todo o espaço.
     </div>
   </div>
 
@@ -79,7 +79,7 @@ The grid cells below do not specify any widths, they just naturally space themse
   </div>
 </div>
 
-### Individual Sizing
+### Dimensionamento Individual
 
 When equal widths aren't what you want, you can add sizing classes to individual cells. Cells without sizing classes simply divide up the remaining space as normal.
 
@@ -118,7 +118,7 @@ The cells below labeled "auto" do not have sizing classes specified.
   </div>
 </div>
 
-### Responsive
+### Responsivo
 
 Responsive Grids work by adding media classes to the Grid cells or containers. When those media values are met, the grids automatically adjust accordingly.
 
@@ -144,7 +144,7 @@ The cells below should be full width by default and scaled to fit above `48em`. 
   </div>
 </div>
 
-### Grid-ception
+### Grids aninhados
 
 Grid components are infinitely nestable inside of other grid components.
 
@@ -175,9 +175,9 @@ Grid components are infinitely nestable inside of other grid components.
   </div>
 </div>
 
-## Alignment Features
+## Recursos de Alinhamento
 
-### Top-aligned Grid Cells
+### Células alinhadas ao topo
 
 <div class="Grid Grid--gutters Grid--top">
   <div class="Grid-cell">
@@ -197,7 +197,7 @@ Grid components are infinitely nestable inside of other grid components.
   </div>
 </div>
 
-### Bottom-aligned Grid Cells
+### Células alinhadas à base
 
 <div class="Grid Grid--gutters Grid--bottom">
   <div class="Grid-cell">
@@ -217,7 +217,7 @@ Grid components are infinitely nestable inside of other grid components.
   </div>
 </div>
 
-### Vertically Centered Grid Cells
+### Células alinhadas verticalmente
 
 <div class="Grid Grid--gutters Grid--center">
   <div class="Grid-cell">
@@ -231,7 +231,7 @@ Grid components are infinitely nestable inside of other grid components.
   </div>
 </div>
 
-### Mixed Vertical Alignment
+### Alinhamento Vertical Misto
 
 <div class="Grid Grid--gutters">
   <div class="Grid-cell Grid-cell--top">
@@ -255,7 +255,7 @@ Grid components are infinitely nestable inside of other grid components.
   </div>
 </div>
 
-## The HTML
+## O HTML
 
 ```html
 <div class="Grid">
@@ -265,9 +265,9 @@ Grid components are infinitely nestable inside of other grid components.
 </div>
 ```
 
-## The CSS
+## O CSS
 
-### Basic Grid Styles
+### Estilos Básicos do Grid
 
 ```css
 .Grid {
@@ -279,7 +279,7 @@ Grid components are infinitely nestable inside of other grid components.
 }
 ```
 
-### Grid Style Modifiers
+### Modificadores de Estilo do Grid
 
 ```css
 /* With gutters */
@@ -313,7 +313,7 @@ Grid components are infinitely nestable inside of other grid components.
 }
 ```
 
-### Responsive Modifiers (a mobile-first approach)
+### Modificadores Responsivos (uma abordagem mobile-first)
 
 ```css
 /* Base classes for all media */
@@ -372,4 +372,4 @@ Grid components are infinitely nestable inside of other grid components.
 }
 ```
 
-View the full [source](https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/grid.css) for the `Grid` component used in this demo on Github.
+Veja o [código fonte completo](https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/grid.css) para o componente `Grid` usado nesse demo no Github.
