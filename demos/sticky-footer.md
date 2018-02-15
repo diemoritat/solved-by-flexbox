@@ -1,26 +1,26 @@
 ---
 template: default.html
 title: Footer Fixo
-excerpt: Getting your footer to stick to the bottom of sparsely contented pages has always been tricky. And if the footer's height is unknown, it's basically impossible. Not so anymore.
+excerpt: Deixar seu footer fixado no final de sua página com conteúdo variável sempre foi algo trabalhoso. E se a altura do footer não for fixa, era basicamente impossível. Não é mais assim. 
 ---
 
 <div class="Demo Demo--spaced">
 
-Click the button below to hide the contents of this page. Notice how the footer sticks to the bottom of the window even when there's not enough content to fill the page.
+Clique no botão abaixo para esconder o conteúdo desta página. Perceba como o footer gruda no final da janela mesmo quando não há conteúdo suficiente para preencher toda a página.
 
-<button id="collapse-trigger" class="Button"><span class="icon-refresh u-spaceRS"></span> Toggle Contents</button>
+<button id="collapse-trigger" class="Button"><span class="icon-refresh u-spaceRS"></span> Alterar Conteúdo </button>
 
 </div>
 
 <div id="collapsable-content">
 
-Getting the footer to stick to the bottom of pages with sparse content is something just about every Web developer has tried to tackle at some point in his or her career. And, for the most part, it's a solved problem. Yet all the [existing solutions](http://ryanfait.com/resources/footer-stick-to-bottom-of-page/) have one significant shortcoming &mdash; they don't work if the height of your footer is unknown.
+Deixar o footer fixado no final da página com conteúdo espalhado é algo que praticamente todo desenvolvedor web já tentou fazer em algum ponto de sua carreira. E, na maioria das dos casos, já é um problema resolvido. Ainda assim, todas as [soluções existentes](http://ryanfait.com/resources/footer-stick-to-bottom-of-page/) tem uma deficiência significativa &mdash; elas não funcionam se a altura do seu footer for desconhecida.
 
-Flexbox is a perfect fit for this type of problem. While mostly known for laying out content in the horizontal direction, Flexbox actually works just as well for vertical layout problems. All you have to do is wrap the vertical sections in a flex container and choose which ones you want to expand. They'll automatically take up all the available space in their container.
+O Flexbox se encaixa perfeitamente nesse tipo de problema. Embora seja mais conhecido por alinhar conteúdo na direção horizontal, o Flexbox também funciona muito bem para problemas de layout na vertical. Tudo o que você precisa fazer é envolver as seções verticais em um container flex e escolher quais você quer expandir. Eles irão automaticamente tomar todo o espaço disponível no container.
 
-In the example below, the container is set to the height of the window, and the content area is told to expand as needed. *(Note: in the vertical direction you need to specify a height for the container. This is different from the horizontal direction, which automatically expands to fit.)*
+No exemplo abaixo, o container tem como altura a altura total da janela, e a área de conteúdo irá se expandir conforme necessário. *(Nota: na direção vertical, você precisa especificar uma altura para o container, diferente da horizontal, que expande automaticamente para caber no espaço disponível.)*
 
-## The HTML
+## O HTML
 
 ```xml
 <body class="Site">
@@ -30,7 +30,7 @@ In the example below, the container is set to the height of the window, and the 
 </body>
 ```
 
-## The CSS
+## O CSS
 
 ```css
 .Site {
@@ -44,9 +44,9 @@ In the example below, the container is set to the height of the window, and the 
 }
 ```
 
-View the full [source](https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/site.css) for the `Site` component used in this demo on Github.
+Veja o [código fonte completo](https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/site.css) para o componente `Site` usado nesse demo no Github.
 
-<aside class="Notice"><strong>Note:</strong>&nbsp; the CSS required to make this demo work cross-browser is slightly different from the CSS shown in the example above, which assumes a fully spec-compliant browser. See the <a href="https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/site.css">comments in the source</a> for more details.</aside>
+<aside class="Notice"><strong>Nota:</strong>&nbsp; o CSS necessário para fazer esse demo funcionar em todos os browsers é levemente diferente do CSS mostrado no exemplo acima, que leva em consideração apenas browsers com suporte total à especificação Flexbox. Veja os  <a href="https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/site.css">comentários no código fonte</a> para mais detalhes.</aside>
 
 </div>
 

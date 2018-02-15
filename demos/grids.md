@@ -22,7 +22,7 @@ Listados abaixo estão alguns dos meus critérios para um sistema de grid ideal.
 - Para um controle mais refinado, você pode adicionar classes de tamanho em células individuais. Sem essas classes, elas apenas dividirão o espaço disponível entre si.
 - Para grids responsivos, você pode adicionar classes específicas de media query às células.
 - Células individuais podem ser alinhadas verticalmente ao topo, à base ou ao meio.
-- Quando você quiser que todas as células em um grid tenham o mesmo tamanho ou alinhamento, deveria ser possível adicionar apenas uma classe ao conteiner para evitar repetição desnecessária.
+- Quando você quiser que todas as células em um grid tenham o mesmo tamanho ou alinhamento, deveria ser possível adicionar apenas uma classe ao container para evitar repetição desnecessária.
 - Grids podem ser aninhados por quantos níveis forem necessários.
 
 ### Grids Básicos
@@ -120,7 +120,7 @@ As células abaixo marcadas com "auto" não utilizam classes de tamanho.
 
 ### Responsividade
 
-Grids Responsivos funcionam adicionando "media classes" às células ou aos conteineres dessas células. Quando os valores definidos por essas classes forem válidos, os grids se ajustarão de acordo com o definido.
+Grids Responsivos funcionam adicionando "media classes" às células ou aos containeres dessas células. Quando os valores definidos por essas classes forem válidos, os grids se ajustarão de acordo com o definido.
 
 As células abaixo devem ter largura total por padrão e devem se encaixar umas com as outras acima de  `48em`. Redimensione seu browser para ver isso em ação.
 
