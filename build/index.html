@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Solved by Flexbox &mdash; CSS limpo, livre de hacks</title>
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name=viewport content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="Um showcase de problemas antes difíceis ou impossíveis de serem resolvidos apenas com CSS, agora triviais usando Flexbox.">
+  <meta name="google-site-verification" content="q5KncOje-dNdD5uxqSOG1znSAo5Wsz5MlBcAmteQAJA" />
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/main.css" rel="stylesheet" type="text/css">
+
+  <script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  window.onerror=function fn(){fn.q=fn.q||[];fn.q.push(arguments)};
+  </script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+  <script async id="twitter-wjs" src="https://platform.twitter.com/widgets.js"></script>
+
+</head>
+
+  <body class="Site">
+    <header class="Site-header">
+      <div class="Header" role="banner">
+        <div class="Header-titles">
+  <h1 class="Header-title"><a href="/">Solved <i>by</i> Flexbox</a></h1>
+  <h2 class="Header-subTitle">CSS limpo, livre de hacks</h2>
+</div>
+<div class="Header-actions">
+  <a class="Header-button Button Button--action Button--wide"
+     ga-on="click"
+     ga-hit-type="social"
+     ga-social-network="Github"
+     ga-social-action="view-source"
+     ga-social-target="https://github.com/philipwalton/solved-by-flexbox"
+     href="https://github.com/philipwalton/solved-by-flexbox">
+    <span class="icon-github icon-large"></span>&nbsp; Ver fonte do Projeto
+  </a>
+  <a class="Header-button Button Button--wide"
+     ga-on="click"
+     ga-hit-type="social"
+     ga-social-network="Twitter"
+     ga-social-action="tweet"
+     ga-social-target="https://philipwalton.github.com/solved-by-flexbox/"
+     href="https://twitter.com/intent/tweet?text=A%20showcase%20of%20traditionally%20hard%20CSS%20problems%2C%20easily%20solved%20using%20flexbox.&url=https://philipwalton.github.com/solved-by-flexbox/&via=philwalton">
+    <span class="icon-twitter icon-large twitter-color"></span>&nbsp; Espalhe a palavra
+  </a>
+</div>
+
+      </div>
+    </header>
+    <main class="Site-content Site-content--full">
+      
+<section class="Section">
+  <div class="Container">
+    <h2 class="Section-heading">Introdução</h2>
+    <p>O CSS tem sofrido com a falta de mecanismos de layout por tempo demais. Transições, animações, filtros, todos são adições ótimas e úteis à linguagem, mas eles não tratam dos maiores problemas que desenvolvedores vem reclamando pelo que parece ser uma eternidade.</p>
+    <p>Finalmente, graças ao <a href="http://www.w3.org/TR/css3-flexbox/">Flexbox</a>, temos uma solução.</p>
+    <p>Este site não é mais um framework CSS. Em vez disso, o propósito desse site é mostrar problemas que antes eram difíceis ou impossíveis de serem resolvidos apenas com CSS, agora sendo triviais com Flexbox. E com o lançamento recente do Internet Explorer 11 e Safari 6.1, a última especificação do Flexbox é suportada em todo browser moderno.</p>
+    <p>Confira os demos abaixo. Veja os estilos no Web Inspector ou entre no <a href="https://github.com/philipwalton/solved-by-flexbox">código fonte para ver o quão fácil o layout com CSS será quando Flexbox virar popular.</a></p>
+  </div>
+</section>
+
+<section class="Section">
+  <div class="Container">
+    <h2 class="Section-heading">Showcase</h2>
+    <ul class="Grid Grid--guttersLg">
+      
+        <li class="Grid-cell u-full u-med-1of2 u-large-1of3">
+          <div class="Feature">
+            <a href="/demos/grids/">
+              <figure class="Feature-figure">
+                <img class="Feature-image" alt="Grids melhores e mais simples" src="/images/grids.jpg">
+              </figure>
+              <h3 class="Feature-title">Grids melhores e mais simples</h3>
+            </a>
+            <p class="Feature-description">Flexbox nos dá a maior parte dos recursos que queremos de um sistema de grid de forma simples. E tamanho e alinhamento estão apenas uma ou duas propriedades de distância.</p>
+          </div>
+        </li>
+      
+        <li class="Grid-cell u-full u-med-1of2 u-large-1of3">
+          <div class="Feature">
+            <a href="/demos/holy-grail/">
+              <figure class="Feature-figure">
+                <img class="Feature-image" alt="Holy Grail Layout" src="/images/holy-grail.jpg">
+              </figure>
+              <h3 class="Feature-title">Holy Grail Layout</h3>
+            </a>
+            <p class="Feature-description">This classic problem has been challenging CSS hackers for years, yet none of the historical solutions have fully solved it. With Flexbox, it's finally possible.</p>
+          </div>
+        </li>
+      
+        <li class="Grid-cell u-full u-med-1of2 u-large-1of3">
+          <div class="Feature">
+            <a href="/demos/input-add-ons/">
+              <figure class="Feature-figure">
+                <img class="Feature-image" alt="Input Add-ons" src="/images/input-add-ons.jpg">
+              </figure>
+              <h3 class="Feature-title">Input Add-ons</h3>
+            </a>
+            <p class="Feature-description">Creating full-width, fluid input/button pairs has been impossible for most of the history of CSS. With Flexbox it couldn't be easier.</p>
+          </div>
+        </li>
+      
+        <li class="Grid-cell u-full u-med-1of2 u-large-1of3">
+          <div class="Feature">
+            <a href="/demos/media-object/">
+              <figure class="Feature-figure">
+                <img class="Feature-image" alt="Media Object" src="/images/media-object.jpg">
+              </figure>
+              <h3 class="Feature-title">Media Object</h3>
+            </a>
+            <p class="Feature-description">Create media objects with fixed or varying figure sizes without worrying about overflow, clearfixing, or block formatting context hacks.</p>
+          </div>
+        </li>
+      
+        <li class="Grid-cell u-full u-med-1of2 u-large-1of3">
+          <div class="Feature">
+            <a href="/demos/sticky-footer/">
+              <figure class="Feature-figure">
+                <img class="Feature-image" alt="Footer Fixo" src="/images/sticky-footer.jpg">
+              </figure>
+              <h3 class="Feature-title">Footer Fixo</h3>
+            </a>
+            <p class="Feature-description">Deixar seu footer fixado no final de sua página com conteúdo variável sempre foi algo trabalhoso. E se a altura do footer não for fixa, era basicamente impossível. Não é mais assim.</p>
+          </div>
+        </li>
+      
+        <li class="Grid-cell u-full u-med-1of2 u-large-1of3">
+          <div class="Feature">
+            <a href="/demos/vertical-centering/">
+              <figure class="Feature-figure">
+                <img class="Feature-image" alt="Vertical Centering" src="/images/vertical-centering.jpg">
+              </figure>
+              <h3 class="Feature-title">Vertical Centering</h3>
+            </a>
+            <p class="Feature-description">This classic problem has been challenging CSS hackers for years, yet none of the historical solutions have fully solved it. With Flexbox, it's finally possible.</p>
+          </div>
+        </li>
+      
+    </ul>
+  </div>
+</section>
+
+<section class="Section">
+  <div class="Container">
+    <h2 class="Section-heading">Suporte dos Navegadores</h2>
+
+    <ul class="Grid Grid--guttersLg Grid--justifyCenter">
+      <li class="Grid-cell Grid-cell--autoSize">
+        <div class="Browser Browser--chrome" title="Since 2012-07-31">
+          <figure class="Browser-image"></figure>
+          Chrome<br>21+
+        </div>
+      </li>
+      <li class="Grid-cell Grid-cell--autoSize">
+        <div class="Browser Browser--opera" title="Since 2012-11-05">
+          <figure class="Browser-image"></figure>
+          Opera<br>12.1+
+        </div>
+      </li>
+      <li class="Grid-cell Grid-cell--autoSize">
+        <div class="Browser Browser--firefox" title="Since 2013-06-25">
+          <figure class="Browser-image"></figure>
+          Firefox<br>22+
+        </div>
+      </li>
+      <li class="Grid-cell Grid-cell--autoSize">
+        <div class="Browser Browser--safari" title="Since 2013-06-11">
+          <figure class="Browser-image"></figure>
+          Safari<br>6.1+
+        </div>
+      </li>
+      <li class="Grid-cell Grid-cell--autoSize">
+        <div class="Browser Browser--ie" title="Since 2012-09-04">
+          <figure class="Browser-image"></figure>
+          IE<br>10+
+        </div>
+      </li>
+      <li class="Grid-cell Grid-cell--autoSize">
+        <div class="Browser Browser--edge" title="Since 2015-03-15">
+          <figure class="Browser-image"></figure>
+          Edge<br>All
+        </div>
+      </li>
+    </ul>
+
+    <h3 class="Section-heading">Ressalvas e Bugs Conhecidos</h3>
+    <ul class="Section-list">
+      <li>IE 10 tem suporte ao Flexbox, mas para a <a href="http://www.w3.org/TR/2012/WD-css3-flexbox-20120322/">versão de rascunho</a> da especificação atual:(<code>display:flexbox</code>). </li>
+      <li>Safari 6 e versões mais novas oferecem suporte à versão <a href="http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/">original</a> da sintaxe do Flexbox, que agora é obsoleta: (<code>display:box</code>).</li>
+      <li>Firefox 27 e versões mais novas não oferecem suporte a flexboxes multilinha. Veja <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=702508">esse bug</a> para mais detalhes.</li>
+      <li>Para uma comparação completa de suporte oferecido por browsers, confira <a href="http://caniuse.com/flexbox">caniuse.com/flexbox</a></li>
+    </ul>
+  </div>
+</section>
+
+<section class="Section">
+  <div class="Container">
+    <h2 class="Section-heading">Sobre o Código</h2>
+    <p>Todos os exemplos de código nesse site mostram como resolver um problema em particular usando Flexbox. Eles mostram apenas o código que é necessário para fazer as demos funcionarem em um browser que ofereça suporte completo à especificação atual. Alguns browsers não oferecem suporte total com a última especificação, então infelizmente, algumas soluções alternativas foram necessárias.</p>
+    <p>Soluções para browsers sem suporte completo não são mostradas nos exemplos de código, mas se você estiver curioso sobre esses detalhes de implementação, você pode verificar o código fonte. Cada demo possui link para sua fonte, e todas as alternativas específicas para esses browsers estão bem documentadas, então não tenha medo de dar uma olhada.</p>
+    <p>Os prefixos e traduções das propriedades flex atuais para as suas equivalentes antigas são gerenciadas pelo <a href="https://github.com/ai/autoprefixer">autoprefixer</a>. Se você está escrevendo código com Flexbox e não está usando autoprefixer, bom, você está cometendo um engano terrível.</p>
+    <p>A convenção utilizada para nomenclatura de classes nos exemplos de código foi retirada do <a href="https://github.com/suitcss/suit">SUIT CSS</a>, que é baseado na metodologia BEM. Cada exemplo inclui um ou mais componentes CSS reutilizáveis, permitindo que você adapte ou copie esses padrões para seus projetos. Links são providenciados para seus respectivos componentes em cada página de exemplo. </p>
+    <p>Se você encontrar um erro ou quiser sugerir algum exemplo adicional, sinta-se livre para abrir uma issue ou um pull request em <a href="https://github.com/philipwalton/solved-by-flexbox">Github</a>.</p>
+  </div>
+</section>
+<section class="Section">
+  <div class="Container">
+    <h2 class="Section-heading">Traduções</h2>
+    <p>As seguintes traduções foram gentilmente providenciadas pela comunidade:</p>
+    <ul class="Section-list">
+      <li><a href="https://hufan-akari.github.io/solved-by-flexbox/">Chinese</a></li>
+      <li><a href="http://hashrock.github.io/solved-by-flexbox-ja/">Japanese</a></li>
+      <li><a href="https://hyunseob.github.io/solved-by-flexbox-kr/">Korean</a></li>
+      <li><a href="https://diemoritat.github.io/solved-by-flexbox-ptbr/">Portuguese</a></li>
+    </ul>
+    <p>Por favor note que as traduções não são oficiais e podem conter erros ou estarem desatualizadas. Para submeter sua própria tradução, por favor faça um <a href="https://github.com/philipwalton/solved-by-flexbox/pull/new/master" class="rich-diff-level-one">pull request</a> ou <a href="https://github.com/philipwalton/solved-by-flexbox/issues/new" class="rich-diff-level-one">abra um issue</a> no Github com um link para seu conteúdo traduzido.</p>
+  </div>
+</section>
+
+    </main>
+    <footer class="Site-footer">
+      <div class="Footer">
+        <span class="Footer-social">
+  <iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user=philipwalton&repo=solved-by-flexbox&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="106px" height="20px"></iframe>
+  <a href="https://twitter.com/philwalton" class="twitter-follow-button" data-show-count="true" data-lang="en">@philwalton</a>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-text="A showcase of traditionally hard CSS problems, easily solved using flexbox." data-url="https://philipwalton.github.io/solved-by-flexbox/" data-count="horizontal" data-via="philwalton" data-related="philwalton:Creator of Solved by Flexbox">Tweet</a>
+</span>
+<div class="Footer-credits">
+  <span class="Footer-credit">Created and maintained by <a href="https://philipwalton.com">Philip Walton</a>.</span>
+
+  <span class="Footer-credit">Source code and examples released under the <a href="https://github.com/philipwalton/solved-by-flexbox/blob/master/LICENSE">MIT</a> license.</span>
+
+  <span class="Footer-credit">Website and documentation licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</span>
+</div>
+
+      </div>
+    </footer>
+    <script src="/main.js"></script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Footer Fixo &mdash; Solved by Flexbox &mdash; CSS limpo, livre de hacks</title>
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name=viewport content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="Um showcase de problemas antes difíceis ou impossíveis de serem resolvidos apenas com CSS, agora triviais usando Flexbox.">
+  <meta name="google-site-verification" content="q5KncOje-dNdD5uxqSOG1znSAo5Wsz5MlBcAmteQAJA" />
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+
+  <link href="https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/main.css" rel="stylesheet" type="text/css">
+
+  <script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  window.onerror=function fn(){fn.q=fn.q||[];fn.q.push(arguments)};
+  </script>
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+  <script async id="twitter-wjs" src="https://platform.twitter.com/widgets.js"></script>
+
+</head>
+
+  <body class="Site">
+    <header class="Site-header">
+      <div class="Header Header--cozy" role="banner">
+        <div class="Header-titles">
+  <h1 class="Header-title"><a href="/">Solved <i>by</i> Flexbox</a></h1>
+  <h2 class="Header-subTitle">CSS limpo, livre de hacks</h2>
+</div>
+<div class="Header-actions">
+  <a class="Header-button Button Button--action Button--wide"
+     ga-on="click"
+     ga-hit-type="social"
+     ga-social-network="Github"
+     ga-social-action="view-source"
+     ga-social-target="https://github.com/philipwalton/solved-by-flexbox"
+     href="https://github.com/philipwalton/solved-by-flexbox">
+    <span class="icon-github icon-large"></span>&nbsp; Ver fonte do Projeto
+  </a>
+  <a class="Header-button Button Button--wide"
+     ga-on="click"
+     ga-hit-type="social"
+     ga-social-network="Twitter"
+     ga-social-action="tweet"
+     ga-social-target="https://philipwalton.github.com/solved-by-flexbox/demos/sticky-footer/"
+     href="https://twitter.com/intent/tweet?text=A%20showcase%20of%20traditionally%20hard%20CSS%20problems%2C%20easily%20solved%20using%20flexbox.&url=https://philipwalton.github.com/solved-by-flexbox/&via=philwalton">
+    <span class="icon-twitter icon-large twitter-color"></span>&nbsp; Espalhe a palavra
+  </a>
+</div>
+
+      </div>
+    </header>
+    <main class="Site-content">
+      <div class="Container">
+        <h1>Footer Fixo</h1>
+        <div class="Demo Demo--spaced">
+<p>Clique no botão abaixo para esconder o conteúdo desta página. Perceba como o footer gruda no final da janela mesmo quando não há conteúdo suficiente para preencher toda a página.</p>
+<button id="collapse-trigger" class="Button"><span class="icon-refresh u-spaceRS"></span> Alterar Conteúdo </button>
+</div>
+<div id="collapsable-content">
+<p>Deixar o footer fixado no final da página com conteúdo espalhado é algo que praticamente todo desenvolvedor web já tentou fazer em algum ponto de sua carreira. E, na maioria das dos casos, já é um problema resolvido. Ainda assim, todas as <a href="http://ryanfait.com/resources/footer-stick-to-bottom-of-page/">soluções existentes</a> tem uma deficiência significativa — elas não funcionam se a altura do seu footer for desconhecida.</p>
+<p>O Flexbox se encaixa perfeitamente nesse tipo de problema. Embora seja mais conhecido por alinhar conteúdo na direção horizontal, o Flexbox também funciona muito bem para problemas de layout na vertical. Tudo o que você precisa fazer é envolver as seções verticais em um container flex e escolher quais você quer expandir. Eles irão automaticamente tomar todo o espaço disponível no container.</p>
+<p>No exemplo abaixo, o container tem como altura a altura total da janela, e a área de conteúdo irá se expandir conforme necessário. <em>(Nota: na direção vertical, você precisa especificar uma altura para o container, diferente da horizontal, que expande automaticamente para caber no espaço disponível.)</em></p>
+<h2>O HTML</h2>
+<pre><code class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">body</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Site"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">header</span>&gt;</span>…<span class="hljs-tag">&lt;/<span class="hljs-name">header</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">main</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"Site-content"</span>&gt;</span>…<span class="hljs-tag">&lt;/<span class="hljs-name">main</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span>…<span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<h2>O CSS</h2>
+<pre><code class="language-css"><span class="hljs-selector-class">.Site</span> {
+  <span class="hljs-attribute">display</span>: flex;
+  <span class="hljs-attribute">min-height</span>: <span class="hljs-number">100vh</span>;
+  <span class="hljs-attribute">flex-direction</span>: column;
+}
+
+<span class="hljs-selector-class">.Site-content</span> {
+  <span class="hljs-attribute">flex</span>: <span class="hljs-number">1</span>;
+}
+</code></pre>
+<p>Veja o <a href="https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/site.css">código fonte completo</a> para o componente <code>Site</code> usado nesse demo no Github.</p>
+<aside class="Notice"><strong>Nota:</strong>&nbsp; o CSS necessário para fazer esse demo funcionar em todos os browsers é levemente diferente do CSS mostrado no exemplo acima, que leva em consideração apenas browsers com suporte total à especificação Flexbox. Veja os  <a href="https://github.com/philipwalton/solved-by-flexbox/blob/master/assets/css/components/site.css">comentários no código fonte</a> para mais detalhes.</aside>
+</div>
+<script class="js-allow-before-footer">
+  (function() {
+    var collapseTrigger = document.getElementById("collapse-trigger");
+    var collapseableContent = document.getElementById("collapsable-content");
+    var isCollapsed = false;
+    collapseTrigger.addEventListener("click", function() {
+      if (isCollapsed) {
+        collapseableContent.classList.remove("u-hidden");
+      } else {
+        collapseableContent.classList.add("u-hidden");
+      }
+      isCollapsed = !isCollapsed;
+    }, false);
+  }());
+</script>
+
+      </div>
+    </main>
+    <footer class="Site-footer">
+      <div class="Footer">
+        <span class="Footer-social">
+  <iframe class="github-btn" src="https://ghbtns.com/github-btn.html?user=philipwalton&repo=solved-by-flexbox&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="106px" height="20px"></iframe>
+  <a href="https://twitter.com/philwalton" class="twitter-follow-button" data-show-count="true" data-lang="en">@philwalton</a>
+  <a href="https://twitter.com/share" class="twitter-share-button" data-text="A showcase of traditionally hard CSS problems, easily solved using flexbox." data-url="https://philipwalton.github.io/solved-by-flexbox/" data-count="horizontal" data-via="philwalton" data-related="philwalton:Creator of Solved by Flexbox">Tweet</a>
+</span>
+<div class="Footer-credits">
+  <span class="Footer-credit">Created and maintained by <a href="https://philipwalton.com">Philip Walton</a>.</span>
+
+  <span class="Footer-credit">Source code and examples released under the <a href="https://github.com/philipwalton/solved-by-flexbox/blob/master/LICENSE">MIT</a> license.</span>
+
+  <span class="Footer-credit">Website and documentation licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</span>
+</div>
+
+      </div>
+    </footer>
+    <script src="/main.js"></script>
+
+
+
+  </body>
+</html>
