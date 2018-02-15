@@ -81,9 +81,9 @@ As células de grids abaixo não especificam nenhuma largura, elas naturalmente 
 
 ### Dimensionamento Individual
 
-When equal widths aren't what you want, you can add sizing classes to individual cells. Cells without sizing classes simply divide up the remaining space as normal.
+Quando você não quiser larguras iguais, você pode adicionar classes de tamanho às células. Células sem classes de tamanho simplesmente dividirão o espaço disponível entre si.
 
-The cells below labeled "auto" do not have sizing classes specified.
+As células abaixo marcadas com "auto" não utilizam classes de tamanho.
 
 <div class="Grid Grid--gutters u-textCenter">
   <div class="Grid-cell u-1of2">
@@ -118,35 +118,35 @@ The cells below labeled "auto" do not have sizing classes specified.
   </div>
 </div>
 
-### Responsivo
+### Responsividade
 
-Responsive Grids work by adding media classes to the Grid cells or containers. When those media values are met, the grids automatically adjust accordingly.
+Grids Responsivos funcionam adicionando "media classes" às células ou aos conteineres dessas células. Quando os valores definidos por essas classes forem válidos, os grids se ajustarão de acordo com o definido.
 
-The cells below should be full width by default and scaled to fit above `48em`. Resize your browser to see them in action.
+As células abaixo devem ter largura total por padrão e devem se encaixar umas com as outras acima de  `48em`. Redimensione seu browser para ver isso em ação.
 
 <div class="Grid Grid--gutters Grid--full large-Grid--fit u-textCenter">
   <div class="Grid-cell">
-    <div class="Demo">Full / Halves</div>
+    <div class="Demo">Total / Metade</div>
   </div>
   <div class="Grid-cell">
-    <div class="Demo">Full / Halves</div>
+    <div class="Demo">Total / Metade</div>
   </div>
 </div>
 <div class="Grid Grid--gutters Grid--full large-Grid--fit u-textCenter">
   <div class="Grid-cell">
-    <div class="Demo">Full / Thirds</div>
+    <div class="Demo">Total / Um terço</div>
   </div>
   <div class="Grid-cell">
-    <div class="Demo">Full / Thirds</div>
+    <div class="Demo">Total / Um terço</div>
   </div>
   <div class="Grid-cell">
-    <div class="Demo">Full / Thirds</div>
+    <div class="Demo">Total / Um terço</div>
   </div>
 </div>
 
 ### Grids aninhados
 
-Grid components are infinitely nestable inside of other grid components.
+Componentes de grid são aninháveis infinitamente dentro de outros componentes de grid.
 
 <div class="Grid Grid--gutters Grid--flexCells u-textCenter">
   <div class="Grid-cell">
@@ -182,7 +182,7 @@ Grid components are infinitely nestable inside of other grid components.
 <div class="Grid Grid--gutters Grid--top">
   <div class="Grid-cell">
     <div class="Demo">
-      This cell should be top-aligned.
+      Essa célula deve ser alinhada ao topo.
     </div>
   </div>
   <div class="Grid-cell u-1of2">
@@ -192,7 +192,7 @@ Grid components are infinitely nestable inside of other grid components.
   </div>
   <div class="Grid-cell">
     <div class="Demo">
-      This cell should be top-aligned.
+      Essa célula deve ser alinhada ao topo.
     </div>
   </div>
 </div>
@@ -202,7 +202,7 @@ Grid components are infinitely nestable inside of other grid components.
 <div class="Grid Grid--gutters Grid--bottom">
   <div class="Grid-cell">
     <div class="Demo">
-      This cell should be bottom-aligned.
+      Essa célula deve ser alinhada à base.
     </div>
   </div>
   <div class="Grid-cell">
@@ -212,7 +212,7 @@ Grid components are infinitely nestable inside of other grid components.
   </div>
   <div class="Grid-cell">
     <div class="Demo">
-      This cell should be bottom-aligned.
+      Essa célula deve ser alinhada à base.
     </div>
   </div>
 </div>
@@ -222,7 +222,7 @@ Grid components are infinitely nestable inside of other grid components.
 <div class="Grid Grid--gutters Grid--center">
   <div class="Grid-cell">
     <div class="Demo">
-      This cell should be vertically-centered with the cell to its right.
+      Essa célula deve ser centralizada verticalmente com a célula à direita.
     </div>
   </div>
   <div class="Grid-cell">
@@ -236,7 +236,7 @@ Grid components are infinitely nestable inside of other grid components.
 <div class="Grid Grid--gutters">
   <div class="Grid-cell Grid-cell--top">
     <div class="Demo">
-      This cell should be top aligned.
+      Essa célula deve ser alinhada ao topo.
     </div>
   </div>
   <div class="Grid-cell">
@@ -245,12 +245,12 @@ Grid components are infinitely nestable inside of other grid components.
   </div>
   <div class="Grid-cell Grid-cell--center">
     <div class="Demo">
-      This cell should be center-aligned.
+      Essa célula deve ser centralizada.
     </div>
   </div>
   <div class="Grid-cell Grid-cell--bottom">
     <div class="Demo">
-      This cell should be bottom-aligned.
+      Essa célula deve ser alinhada à base.
     </div>
   </div>
 </div>
@@ -282,7 +282,7 @@ Grid components are infinitely nestable inside of other grid components.
 ### Modificadores de Estilo do Grid
 
 ```css
-/* With gutters */
+/* Com espaçamentos entre as células */
 .Grid--gutters {
   margin: -1em 0 0 -1em;
 }
@@ -290,7 +290,7 @@ Grid components are infinitely nestable inside of other grid components.
   padding: 1em 0 0 1em;
 }
 
-/* Alignment per row */
+/* Alinhamentos por linha */
 .Grid--top {
   align-items: flex-start;
 }
@@ -301,7 +301,7 @@ Grid components are infinitely nestable inside of other grid components.
   align-items: center;
 }
 
-/* Alignment per cell */
+/* Alinhamentos por célula */
 .Grid-cell--top {
   align-self: flex-start;
 }
@@ -316,7 +316,7 @@ Grid components are infinitely nestable inside of other grid components.
 ### Modificadores Responsivos (uma abordagem mobile-first)
 
 ```css
-/* Base classes for all media */
+/* Classes de base para todas as resoluções */
 .Grid--fit > .Grid-cell {
   flex: 1;
 }
@@ -333,7 +333,7 @@ Grid components are infinitely nestable inside of other grid components.
   flex: 0 0 25%
 }
 
-/* Small to medium screens */
+/* Telas pequenas a médias */
 @media (min-width: 24em) {
   .small-Grid--fit > .Grid-cell {
     flex: 1;
@@ -352,7 +352,7 @@ Grid components are infinitely nestable inside of other grid components.
   }
 }
 
-/* Large screens */
+/* Telas grandes */
 @media (min-width: 48em) {
   .large-Grid--fit > .Grid-cell {
     flex: 1;
