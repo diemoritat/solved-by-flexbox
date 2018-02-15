@@ -1,39 +1,40 @@
 # Solved by Flexbox
 
-A showcase of problems once hard or impossible to solve with CSS alone, now made trivially easy with Flexbox.
+Um showcase de problemas antes difíceis ou impossíveis de serem resolvidos apenas com CSS, agora triviais usando Flexbox.
 
-[View Site](https://philipwalton.github.io/solved-by-flexbox/)
+[Ver Site](https://philipwalton.github.io/solved-by-flexbox/)
 
-## Viewing the Site Locally
+## Ver o Site Localmente
 
-The Solved by Flexbox site can be built with [Node.js](http://nodejs.org/). If you have Node.js installed on your system, you can run the following commands to build and serve a local copy.
+O site Solved by Flexbox pode ser buildado com [Node.js](http://nodejs.org/). Se você tiver Node.js instalado em seu sistema, rode os seguintes comandos para buildar e servir uma cópia local.
 
 ```sh
-# Clone the git repository and cd into the cloned directory.
+# Clone o repositório git e cd dentro do diretório clonado.
 git clone https://github.com/philipwalton/solved-by-flexbox.git
 cd solved-by-flexbox
 
-# Install the dependencies
+# Instale as dependências
 npm install
 
-# Build and serve the site at http://localhost:4000
+# Buildando e servindo o site na porta http://localhost:4000
 npm start
 ```
 
-This starts up a local server on port 4000. To view the site in your browser, navigate to [http://localhost:4000](http://localhost:4000). If you want to use a different port, you can pass the port number as an argument to `npm start`:
+Isso irá inicializar um servidor local na porta 4000. Para ver o site em seu browser, vá até  [http://localhost:4000](http://localhost:4000). Se você quiser usar uma porta diferente, você pode passar o número da porta como um argumento no comando `npm start`:
 
 ```sh
 npm start -- -p 8080
 ```
 
-In addition to building the site and serving it locally, this will also listen for any changes and rebuild the site as needed. This allows you to play around with the code, refresh the browser, and see your changes instantly.
+Além de buildar e rodar o site localmente, isso também irá monitorar seu código e atualizar a cada alteração. Isso permite que você altere seu código, atualize o browser e veja suas alterações instantâneamente.
 
-## Translations
+## Traduções
 
-The following translations have been graciously provided by the community:
+As seguintes traduções foram gentilmente providenciadas pela comunidade:
 
 * [Chinese](https://hufan-akari.github.io/solved-by-flexbox/)
 * [Japanese](http://hashrock.github.io/solved-by-flexbox-ja/)
 * [Korean](https://hyunseob.github.io/solved-by-flexbox-kr/)
+* [Portuguese](https://diemoritat.github.io/solved-by-flexbox-ptbr/)
 
-Please note that translations are unofficial and may be inaccurate or out of date. To submit your own translation, please submit a [pull request](https://github.com/philipwalton/solved-by-flexbox/pull/new/master) or [open an issue](https://github.com/philipwalton/solved-by-flexbox/issues/new) and link to your translated content.
+Por favor note que as traduções não são oficiais e podem conter erros ou estarem desatualizadas. Para submeter sua própria tradução, por favor faça um [pull request](https://github.com/philipwalton/solved-by-flexbox/pull/new/master) ou [abra uma issue](https://github.com/philipwalton/solved-by-flexbox/issues/new) no Github com um link para seu conteúdo traduzido.
