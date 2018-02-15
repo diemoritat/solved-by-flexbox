@@ -1,7 +1,7 @@
 {
   "name": "solved-by-flexbox",
   "description": "A showcase of problems once hard or impossible to solve with CSS alone, now made trivially easy with Flexbox.",
-  "homepage": "https://diemoritat.github.io/solved-by-flexbox-ptbr/",
+  "homepage": "http://diemoritat.github.io/solved-by-flexbox-ptbr/",
   "repository": {
     "type": "git",
     "url": "https://github.com/diemoritat/solved-by-flexbox-ptbr.git"

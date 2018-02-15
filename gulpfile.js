@@ -29,7 +29,7 @@ const DEST = './build';
 /**
  * The name of the Github repo.
  */
-const REPO = 'solved-by-flexbox';
+const REPO = 'solved-by-flexbox-ptbr';
 
 /**
  * The base public path of the site.
